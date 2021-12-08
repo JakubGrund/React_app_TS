@@ -1,8 +1,19 @@
 import React from 'react';
 import { Switch, Route, NavLink } from 'react-router-dom';
 
+// styles and assets
+
 import logo from './assets/logo.svg';
 import './App.scss';
+
+// components
+
+import TheNavigation from './components/TheNavigation';
+
+// views
+import Home from './views/Home';
+import Tunes from './views/Tunes';
+import About from './views/About';
 
 function App() {
   return (
@@ -10,18 +21,14 @@ function App() {
     <div className="App">
 
       <header>
-        <nav>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/tunes">Tunes</NavLink>
-          <NavLink to="/about">About</NavLink>
-        </nav>
+        <TheNavigation/>
       </header>
 
       <main className="content">
         <Switch>
-          <Route path="/" render={() => <h1>Homepage</h1>} />
-					<Route path="/tunes" render={() => <h1>Tunes</h1>} />
-					<Route path="/about" render={() => <h1>About</h1>} />
+          <Route path="/" component={Home} exact/>
+					<Route path="/tunes" component={Tunes} />
+					<Route path="/about" component={About} />
         </Switch>
       </main>
 
