@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 // styles and assets
 
-import logo from './assets/logo.svg';
+
 import './App.scss';
 
 // components
@@ -33,7 +33,7 @@ function App() {
       </main>
 
       <footer>
-        <img src={logo} className="App-logo" alt="logo" />
+        
       </footer>
 
     </div>
